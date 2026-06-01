@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Set-Location \"c:\\\\Users\\\\Malika Kaur\\\\Desktop\\\\searchbot\\\\frontend\"; $env:VITE_API_URL=\"https://inventory-backend-stg1.onrender.com\"; npm run build 2>&1)",
+      "PowerShell(Invoke-RestMethod -Uri \"https://inventory-backend-stg1.onrender.com/health\" -Method GET 2>&1)",
+      "PowerShell($body = '{\"name\":\"laptop\",\"sku\":\"LAP-001\",\"description\":\"\",\"price\":85.0,\"stock_quantity\":1}'; Invoke-RestMethod -Uri \"https://inventory-backend-stg1.onrender.com/api/products/\" -Method POST -Body \\([System.Text.Encoding]::UTF8.GetBytes\\($body\\)\\) -ContentType \"application/json\" 2>&1)"
+    ]
+  }
+}

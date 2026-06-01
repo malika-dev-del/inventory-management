@@ -37,7 +37,7 @@ export default function Customers() {
       closeModal()
       load()
     } catch (err) {
-      setError(err.response?.data?.detail || 'An error occurred')
+      setError(err.response?.data?.detail || err.message || 'An error occurred')
     }
   }
 
